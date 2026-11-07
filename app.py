@@ -10,7 +10,7 @@ app = Flask(
 def MainPage():
     return render_template("MainPage.html")
 
-@app.route("/transition")
+@app.route("/WelcomePage")
 def transition():
     return render_template("Transition.html")
 
