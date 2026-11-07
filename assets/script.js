@@ -1,5 +1,5 @@
-const button = document.getElementById("WelcomeButton");
+const WelcomeButton = document.getElementById("WelcomeButton");
 
-button.addEventListener("click", function() {
+WelcomeButton.addEventListener("click", function() {
     window.location.href = "/WelcomePage";
 });

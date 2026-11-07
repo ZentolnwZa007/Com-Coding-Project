@@ -12,6 +12,6 @@ def MainPage():
 
 @app.route("/WelcomePage")
 def transition():
-    return render_template("Transition.html")
+    return render_template("WelcomePage.html")
 
 app.run(debug=True)
