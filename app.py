@@ -7,7 +7,11 @@ app = Flask(
 )
 
 @app.route("/")
-def home():
+def MainPage():
     return render_template("MainPage.html")
+
+@app.route("/transition")
+def transition():
+    return render_template("Transition.html")
 
 app.run(debug=True)
