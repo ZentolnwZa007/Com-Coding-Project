@@ -7,4 +7,4 @@ webview.create_window(
     height=600
 )
 
-webview.start(debug=True)
+webview.start()
