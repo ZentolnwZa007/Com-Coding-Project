@@ -1,17 +1,10 @@
-from flask import Flask, render_template
+import webview
 
-app = Flask(
-    __name__,
-    template_folder="pages",
-    static_folder="assets"
+webview.create_window(
+    "My Desktop App",
+    "pages/MainPage.html",
+    width=800,
+    height=600
 )
 
-@app.route("/")
-def MainPage():
-    return render_template("MainPage.html")
-
-@app.route("/WelcomePage")
-def transition():
-    return render_template("WelcomePage.html")
-
-app.run(debug=True)
+webview.start(debug=True)

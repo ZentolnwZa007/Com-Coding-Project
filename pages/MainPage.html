@@ -1,11 +1,25 @@
-<html>
-    <head>
-        <title>Main Page</title>
-    </head>
-    <body img src ="/assets/MainBackGround.png" style =" display: block; margin: auto; width: 50%;">
-        <p style = "display: flex; align-items: center; justify-content: center;">Hello, World!</p>
-        <button id = "WelcomeButton" style = "align-items: center;">Play!</button>
+<div class = "Window" id="homePage">
+    <h1>Home</h1>
+    <button onclick="ShowWindow('mainPage')">Go to Main</button>
+</div>
 
-        <script src = "/assets/script.js"></script>
-    </body>
-</html>
+<div class = "Window" id="mainPage" style="display: none;">
+    <h1>Main Page</h1>
+    <button onclick="ShowWindow('homePage')">Back</button>
+</div>
+
+<script>
+
+    function ShowWindow(WindowName) {
+    let Windows = document.querySelectorAll(".Window");
+
+    for (let Window of Windows) {
+        if (Window.id === WindowName) {
+            Window.style.display = "block";
+        } else {
+            Window.style.display = "none";
+        }
+    };
+}
+
+</script>
